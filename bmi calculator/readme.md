@@ -31,3 +31,6 @@ python gui_bmi.py
 **Learning Outcomes**
 * Python programming fundamentals
 * GUI developmen
+
+**Author**
+B.Jahnavi
