@@ -1,0 +1,41 @@
+pip install SpeechRecognition pyttsx3 pyaudio
+import speech_recognition as sr
+import pyttsx3
+import datetime
+import webbrowser
+# Initialize
+recognizer=sr.Recognizer()
+engine=pyttsx3.init()
+def speak(text):
+    print("Assistant:", text)
+    engine.say(text)
+    engine.runAndWait()
+def listen():
+    with sr.Microphone() as source:
+        print("Listening...")
+        audio = recognizer.listen(source)
+    try:
+        command=recognizer.recognize_google(audio)
+        print("You:", command)
+        return command.lower()
+    except:
+        speak("Sorry, I didn't understand.")
+        return ""
+# Main loop
+while True:
+    command=listen()
+    if "hello" in command:
+        speak("Hello! How can I help you?")
+    elif "time" in command:
+        time=datetime.datetime.now().strftime("%H:%M:%S")
+        speak(f"The time is {time}")
+    elif "date" in command:
+        date=datetime.datetime.now().strftime("%Y-%m-%d")
+        speak(f"Today's date is {date}")
+    elif "search" in command:
+        speak("What should I search?")
+        query=listen()
+        webbrowser.open(f"https://www.google.com/search?q={query}")
+    elif "exit" in command or "stop" in command:
+        speak("Goodbye!")
+        break
