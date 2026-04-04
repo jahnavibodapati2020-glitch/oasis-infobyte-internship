@@ -17,6 +17,7 @@ This project is a basic Voice Assistant developed in Python that can recognize u
 - pyttsx3 (for speech output)
 - datetime (for time and date)
 - webbrowser (for search functionality)
+- pywhatkit(for automation of tasks)
 
 ## Installation
 ### Prerequisites
@@ -25,7 +26,7 @@ This project is a basic Voice Assistant developed in Python that can recognize u
 
 ### Steps
 1. Clone the repository:
-   git clone https://github.com/your-username/voice-assistant.git
+   git clone https://github.com/jahnavibodapati2020-glitch/voice-assistant.git
 
 2. Install dependencies:
    pip install SpeechRecognition pyttsx3 pyaudio
@@ -44,6 +45,9 @@ python voice_assistant.py
 * Say "Time" → Returns current system time
 * Say "Date" → Returns current date
 * Say "Search" → Opens Google search
+* Say "Spotify" → Opens Spotify
+* Say "WhatsApp"→ Opens WhatsApp
+* Say "Play"→ Plays a song that user specifies
 * Say "Exit" or "Stop" → Terminates the program
 
 ## Project Structure
