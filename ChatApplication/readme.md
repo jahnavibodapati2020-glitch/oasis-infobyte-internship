@@ -1,4 +1,4 @@
-# Python Chat Application (Client-Server)
+# Chat Application (Client-Server)
 ## Overview
 This project is a simple command-line chat application developed using Python and socket programming. It enables real-time communication between a client and a server over a network.
 
