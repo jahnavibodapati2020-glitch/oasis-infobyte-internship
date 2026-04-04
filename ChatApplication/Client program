@@ -1,0 +1,23 @@
+import socket
+# Create client socket
+client=socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+# Ask for server IP
+server_ip=input("Enter Server IP Address (e.g., 127.0.0.1): ")
+try:
+    client.connect((server_ip, 12345))
+    print("Connected to server!\n")
+except:
+    print(" Unable to connect. Check IP address or server status.")
+    exit()
+while True:
+    message=input("You: ")
+    client.send(message.encode())
+    if message.lower()=="exit":
+        print("Disconnected from server.")
+        break
+    reply=client.recv(1024).decode()
+    if reply.lower()=="exit":
+        print("Server disconnected.")
+        break
+    print("Server:",reply)
+client.close()
