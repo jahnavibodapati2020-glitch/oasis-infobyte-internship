@@ -26,7 +26,7 @@ This project is a basic Voice Assistant developed in Python that can recognize u
 
 ### Steps
 1. Clone the repository:
-   git clone https://github.com/jahnavibodapati2020-glitch/voice-assistant.git
+   git clone https://github.com/jahnavibodapati2020-glitch/oasis-infobyte-internship/tree/main/VoiceAssistant
 
 2. Install dependencies:
    pip install SpeechRecognition pyttsx3 pyaudio
