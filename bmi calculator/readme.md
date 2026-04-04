@@ -23,7 +23,7 @@ BMI-Calculator/
 └── README.md
 
 **Installation & Run**
-git clone https://github.com/jahnavibodapati2020-glitch/oasis-infobyte-internship/blob/main/bmicalculator.py
+git clone https://github.com/jahnavibodapati2020-glitch/oasis-infobyte-internship/tree/main/bmi%20calculator
 cd bmi-calculator
 pip install matplotlib
 python gui_bmi.py
